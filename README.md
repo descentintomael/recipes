@@ -7,6 +7,12 @@ Syntax
 ------
 
 ```ruby
+  Recipe.define :product do
+    ingredients do
+      factory :product
+    end
+  end
+
   Recipe.define :order do
     ingredients do
       factory :customer, :with_payment_method
@@ -15,7 +21,7 @@ Syntax
     
     preparation do
       cart = Cart.new
-      with_each products do |product|
+      products.each do |product|
         cart.add product
       end
       
