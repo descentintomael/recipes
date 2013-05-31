@@ -1,0 +1,4 @@
+
+module Recipes
+  
+end
